@@ -14,9 +14,7 @@ function App() {
       <Navbar />
       <div className="App">
         <Switch>
-          <Route
-            exact
-            path="/"
+          <Route exact path="/"
             render={() => (
               <section>
                 <h2>Welcome to the Redux Essentials example app!</h2>
