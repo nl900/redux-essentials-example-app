@@ -4,8 +4,6 @@ import { unwrapResult } from '@reduxjs/toolkit'
 
 import { addNewPost } from './postsSlice'
 
-import { postAdded } from './postsSlice'
-
 export const AddPostForm = () => {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
