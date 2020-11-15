@@ -29,14 +29,14 @@ const postsSlice = createSlice({
   reducers: {
     reactionAdded(state, action) {
       const { postId, reaction } = action.payload
-      const existingPost = state.entities[postId]
+      const existingPost = state.posts.find((post) => post.id === postId)
       if (existingPost) {
         existingPost.reactions[reaction]++
       }
     },
     postUpdated(state, action) {
       const { id, title, content } = action.payload
-      const existingPost = state.entities[id]
+      const existingPost = state.posts.find(post => post.id === id)
       if (existingPost) {
         existingPost.title = title
         existingPost.content = content
